@@ -1,0 +1,48 @@
+#include <Wire.h> 
+
+
+int ir_read0;
+int ir_read1;
+int ir_read2;
+int ir_read3;
+int ir_read4;
+int ir_read5;
+void setup() {
+  Serial.begin(9600);
+  pinMode(A0, INPUT) ;
+pinMode(A1, INPUT) ;
+pinMode(A2, INPUT) ;
+pinMode(A3, INPUT) ;
+pinMode(A4, INPUT) ;
+pinMode(A5, INPUT) ;
+
+}
+
+void loop() {
+  
+  ir_read0 = digitalRead(A0);
+ Serial.print(ir_read0);
+ Serial.print(' ');
+ 
+ ir_read1 = digitalRead(A1);
+ Serial.print( ir_read1);
+ Serial.print(' ');
+
+ ir_read2 = digitalRead(A2);
+ Serial.print(  ir_read2);
+ Serial.print(' ');
+ 
+ ir_read3 = digitalRead(A3);
+ Serial.print(ir_read3);
+ Serial.print(' ');
+ 
+ ir_read4 = digitalRead(A4);
+ Serial.print(ir_read4);
+ Serial.print(' ');
+ 
+ ir_read5=digitalRead(A5);
+ Serial.print(ir_read5);
+ Serial.println(' ');
+ delay(2);
+
+}
